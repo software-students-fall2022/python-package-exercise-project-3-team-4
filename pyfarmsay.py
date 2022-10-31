@@ -8,5 +8,3 @@ def cowsay(message, maxwidth=100, indent=INDENT_DEFAULT):
 
 def pigsay(message, maxwidth=100, indent=INDENT_DEFAULT):
     return animalsay(wrap(message, maxwidth), animal=animals.PIG, indent=indent)
-
-print(pigsay("hi friends"))

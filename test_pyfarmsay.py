@@ -1,8 +1,12 @@
 
+from multiprocessing.sharedctypes import Value
 import pyfarmsay
 import pytest
 import animals
 
+# Tests: 1. test that input exists in function return message
+#        2. test that the correct aninmal exists in function return message
+#        3. test that invalid function parametes are handled correctly
 class Tests: 
      def test_sanity_check(self):
           """
@@ -51,4 +55,20 @@ class Tests:
                exists = True
 
           assert exists == True
+
+     def improper_input_cowsay(self):
+          """
+          Testing if error is raised with invalid empty string as parameter
+          for cowsay function. 
+          """
+          with pytest.raises(TypeError) as errorInfo:
+               pyfarmsay.cowsay("")
+
+     def improper_input_pigsay(self):
+          """
+          Testing if error is raised with invalid empty string as parameter
+          for pigsay function. 
+          """
+          with pytest.raises(TypeError) as errorInfo:
+               pyfarmsay.pigsay("")
           

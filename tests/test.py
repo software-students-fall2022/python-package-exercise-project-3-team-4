@@ -1,8 +1,8 @@
 
 from multiprocessing.sharedctypes import Value
-import pyfarmsay
 import pytest
-import animals
+import src.pyfarmsay.pyfarmsay as pyfarmsay
+import src.pyfarmsay.animals as animals
 
 # Tests: 1. test that input exists in function return message
 #        2. test that the correct aninmal exists in function return message

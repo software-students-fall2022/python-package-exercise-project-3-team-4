@@ -1,6 +1,7 @@
 from animals import COW
 
 INDENT_DEFAULT = 4
+MAXWIDTH_DEFAULT = 100
 
 def genquotebubble(lines):
     lineslen = len(lines)

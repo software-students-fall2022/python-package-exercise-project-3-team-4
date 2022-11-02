@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "examplepackagefb1258"
+name = "pyfarmsay"
 description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
-version = "0.0.7"
+version = "0.0.1"
 authors = [
     { name="Harrison Douglass", email="sa5793@nyu.edu" },
     { name="Sarah Al-Towaity", email="sa5793@nyu.edu" },

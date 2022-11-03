@@ -3,7 +3,7 @@ import pyfarmsay
 
 
 def main():
-    animal = sys.argv[1]
+    animal = sys.argv[1].lower()
     message = " ".join(sys.argv[2:])
 
     if animal == "cow":

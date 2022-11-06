@@ -32,6 +32,38 @@ class Tests:
           actual = pyfarmsay.pigsay(text)
           assert actual.find(text) != -1
      
+     def test_input_recieved_chickensay(self):
+          """
+          Testing if input exists in chickensay function output
+          """
+          text = "some string"
+          actual = pyfarmsay.chickensay(text)
+          assert actual.find(text) != 1
+     
+     def test_input_recieved_sheepsay(self):
+          """
+          Testing if input exists in sheepsay function output
+          """
+          text = "some string"
+          actual = pyfarmsay.sheepsay(text)
+          assert actual.find(text) != 1
+     
+     def test_input_recieved_penguinsay(self):
+          """
+          Testing if input exists in penguinsay function output
+          """
+          text = "some string"
+          actual = pyfarmsay.penguinsay(text)
+          assert actual.find(text) != 1
+     
+     def test_input_recieved_dogsay(self):
+          """
+          Testing if input exists in dogsay function output
+          """
+          text = "some string"
+          actual = pyfarmsay.dogsay(text)
+          assert actual.find(text) != 1
+
      def test_animal_exists_cowsay(self): 
           """
           Testing if correct animal exists in cowsay function output. 
@@ -55,6 +87,54 @@ class Tests:
                exists = True
 
           assert exists == True
+     
+     def test_animal_exists_chickensay(self):
+          """
+          Testing if correct animal exists in chickensay function output. 
+          """
+          text = "some string"
+          result = pyfarmsay.chickensay(text)
+          exists = False
+          if all(result.find(part) > -1 for part in animals.CHICKEN):
+               exists = True
+
+          assert exists == True
+     
+     def test_animal_exists_sheepsay(self):
+          """
+          Testing if correct animal exists in sheepsay function output. 
+          """
+          text = "some string"
+          result = pyfarmsay.sheepsay(text)
+          exists = False
+          if all(result.find(part) > -1 for part in animals.SHEEP):
+               exists = True
+
+          assert exists == True
+     
+     def test_animal_exists_dogsay(self):
+          """
+          Testing if correct animal exists in dogsay function output. 
+          """
+          text = "some string"
+          result = pyfarmsay.dogsay(text)
+          exists = False
+          if all(result.find(part) > -1 for part in animals.DOG):
+               exists = True
+
+          assert exists == True
+
+     def test_animal_exists_penguinsay(self):
+          """
+          Testing if correct animal exists in penguinsay function output. 
+          """
+          text = "some string"
+          result = pyfarmsay.penguinsay(text)
+          exists = False
+          if all(result.find(part) > -1 for part in animals.PENGUIN):
+               exists = True
+
+          assert exists == True
 
      def improper_input_cowsay(self):
           """
@@ -71,4 +151,36 @@ class Tests:
           """
           with pytest.raises(TypeError) as errorInfo:
                pyfarmsay.pigsay("")
+     
+     def improper_input_chickensay(self):
+          """
+          Testing if error is raised with invalid empty string as parameter
+          for chickensay function. 
+          """
+          with pytest.raises(TypeError) as errorInfo:
+               pyfarmsay.chickensay("")
+
+     def improper_input_sheepsay(self):
+          """
+          Testing if error is raised with invalid empty string as parameter
+          for sheepsay function. 
+          """
+          with pytest.raises(TypeError) as errorInfo:
+               pyfarmsay.sheepsay("")
+     
+     def improper_input_dogsay(self):
+          """
+          Testing if error is raised with invalid empty string as parameter
+          for dogsay function. 
+          """
+          with pytest.raises(TypeError) as errorInfo:
+               pyfarmsay.dogsay("")
+
+     def improper_input_penguinsay(self):
+          """
+          Testing if error is raised with invalid empty string as parameter
+          for penguinsay function. 
+          """
+          with pytest.raises(TypeError) as errorInfo:
+               pyfarmsay.penguinsay("")
           

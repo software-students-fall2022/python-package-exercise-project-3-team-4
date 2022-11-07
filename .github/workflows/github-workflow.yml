@@ -22,7 +22,8 @@ jobs:
 
         #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
       - name: running test file with pytest
-        run: pytest tests/test.py
+        run: python -m pytest ./tests/test.py
+        continue-on-error: true
 
       - name: upload pytest results
         uses: actions/upload-artifact@v3

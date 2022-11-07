@@ -21,15 +21,19 @@ jobs:
             pip install pytest
 
         #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
+      - name: creating pytest directory
+        run: mkdir -p tests/test_results/
+        
       - name: running test file with pytest
         run: python -m pytest ./tests/test.py
         continue-on-error: true
 
+     
       - name: upload pytest results
         uses: actions/upload-artifact@v3
         with:
           name: pytest results of the run
-          path: junit/test-results.xml
+          path: ./tests/test_results/test-results.xml
         if: ${{ always() }}
 
 

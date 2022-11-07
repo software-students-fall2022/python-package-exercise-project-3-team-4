@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyfarmsay"
 description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
-version = "0.0.1"
+version = "0.0.8"
 authors = [
-    { name="Harrison Douglass", email="sa5793@nyu.edu" },
+    { name="Harrison Douglass", email="hpd2015@nyu.edu" },
     { name="Sarah Al-Towaity", email="sa5793@nyu.edu" },
-    { name="Brandon Chao", email="sa5793@nyu.edu" },
-    { name="Eduarda Martini", email="sa5793@nyu.edu" },
-    { name="Michelle Lu", email="sa5793@nyu.edu" },
+    { name="Brandon Chao", email="bc2872@nyu.edu" },
+    { name="Eduarda Martini", email="em4047@nyu.edu" },
+    { name="Michelle Lu", email="ml6610@nyu.edu" },
 
 ]
 license = { file = "LICENSE" }
@@ -26,7 +26,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = ["pytest", "textwrap"]
 
 [project.urls]
 "Homepage" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-4"

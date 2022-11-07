@@ -25,11 +25,12 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+dependencies = [
+    "textwrap"
+]
+
 [project.optional-dependencies]
 dev = ["pytest"]
-
-[project.dependencies]
-dev = ["textwrap"]
 
 [project.urls]
 "Homepage" = "https://github.com/software-students-fall2022/python-package-exercise-project-3-team-4"

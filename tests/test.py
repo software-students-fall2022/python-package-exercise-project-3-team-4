@@ -71,7 +71,7 @@ class Tests:
           text = "some string"
           result = pyfarmsay.cowsay(text)
           exists = False
-          if all(result.find(part) > -1 for part in animals.COW):
+          if all(result.find(part) > -1 for part in animals.COW.body):
                exists = True
 
           assert exists == True
@@ -83,7 +83,7 @@ class Tests:
           text = "some string"
           result = pyfarmsay.pigsay(text)
           exists = False
-          if all(result.find(part) > -1 for part in animals.PIG):
+          if all(result.find(part) > -1 for part in animals.PIG.body):
                exists = True
 
           assert exists == True
@@ -95,7 +95,7 @@ class Tests:
           text = "some string"
           result = pyfarmsay.chickensay(text)
           exists = False
-          if all(result.find(part) > -1 for part in animals.CHICKEN):
+          if all(result.find(part) > -1 for part in animals.CHICKEN.body):
                exists = True
 
           assert exists == True
@@ -107,7 +107,7 @@ class Tests:
           text = "some string"
           result = pyfarmsay.sheepsay(text)
           exists = False
-          if all(result.find(part) > -1 for part in animals.SHEEP):
+          if all(result.find(part) > -1 for part in animals.SHEEP.body):
                exists = True
 
           assert exists == True
@@ -119,7 +119,7 @@ class Tests:
           text = "some string"
           result = pyfarmsay.dogsay(text)
           exists = False
-          if all(result.find(part) > -1 for part in animals.DOG):
+          if all(result.find(part) > -1 for part in animals.DOG.body):
                exists = True
 
           assert exists == True
@@ -131,7 +131,7 @@ class Tests:
           text = "some string"
           result = pyfarmsay.penguinsay(text)
           exists = False
-          if all(result.find(part) > -1 for part in animals.PENGUIN):
+          if all(result.find(part) > -1 for part in animals.PENGUIN.body):
                exists = True
 
           assert exists == True

@@ -1,5 +1,5 @@
 import sys
-from . import farmsay
+from . import pyfarmsay
 
 
 def main():
@@ -7,17 +7,17 @@ def main():
     message = " ".join(sys.argv[2:])
 
     if animal == "cow":
-       return farmsay.cowsay(message)
+       return pyfarmsay.cowsay(message)
     elif animal == "pig":
-        return farmsay.pigsay(message)
+        return pyfarmsay.pigsay(message)
     elif animal == "chicken":
-        return farmsay.chickensay(message)
+        return pyfarmsay.chickensay(message)
     elif animal == "dog":
-        return farmsay.dogsay(message)
+        return pyfarmsay.dogsay(message)
     elif animal == "penguin":
-        return farmsay.penguinsay(message)
+        return pyfarmsay.penguinsay(message)
     elif animal == "sheep":
-        return farmsay.sheepsay(message)
+        return pyfarmsay.sheepsay(message)
     else:
         return "animal not in farm :(!"
 

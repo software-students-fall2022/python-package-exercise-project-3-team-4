@@ -9,7 +9,7 @@ verify_ssl = true
 name = "testpypi"
 
 [packages]
-pyfarmsay = {version = "==0.0.8", index = "testpypi"}
+pyfarmsay = {version = "*", index = "testpypi"}
 
 [dev-packages]
 

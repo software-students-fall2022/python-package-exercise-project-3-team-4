@@ -26,8 +26,10 @@ def genquotebubble(lines):
     return out
 
 def animalsay(lines, animal=COW, indent=INDENT_DEFAULT):
+    if lines == []:
+        lines = [animal.sound]
     out = genquotebubble(lines)
     out.append((" "*(indent))+"\\")
     out.append((" "*(indent))+" \\")
-    out.extend([((" "*(indent+2))+line) for line in animal])
+    out.extend([((" "*(indent+2))+line) for line in animal.body])
     return "\n".join(out)

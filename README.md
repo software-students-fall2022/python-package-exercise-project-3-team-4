@@ -2,3 +2,6 @@
 # Python Package Exercise
 
 A little exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
+
+
+![Badger](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-4/actions/workflows/github-workflow.yml/badge.svg)

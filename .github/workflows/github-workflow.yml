@@ -1,4 +1,4 @@
-name: github-workflow-testautomation
+name: pyfarm-test
 run-name: ${{ github.actor }}'s Run of the Workflow
 on: [pull_request]
 
@@ -6,6 +6,7 @@ jobs:
   the_first_test:
     name: The First Test Job
     runs-on: ubuntu-latest
+    #envirnoment variable CI set to false
 
     steps:
       - uses: actions/checkout@v3
@@ -20,7 +21,7 @@ jobs:
              pip install pytest
 
       - name: running test file with pytest
-        run: pytest test_pyfarmsay.py
+        run: pytest test.py
 
       - name: upload pytest results
         uses: actions/upload-artifact@v3
@@ -28,3 +29,9 @@ jobs:
           name: pytest results of the run
           path: junit/test-results.xml
         if: ${{ always() }}
+
+
+#discord-notify:
+  #name: Pull Request Notification
+  #nvm no discord notification due to lack of permissions
+

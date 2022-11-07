@@ -1,5 +1,5 @@
 import sys
-import farmsay
+from . import farmsay
 
 
 def main():

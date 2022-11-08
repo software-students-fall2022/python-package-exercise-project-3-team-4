@@ -7,14 +7,17 @@ jobs:
     name: The First Test Job
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.11"]
     #envirnoment variable CI set to false
 
     steps:
       - uses: actions/checkout@v3
-      - name: python version 3.* set up
+      - name: setting up one of two recent python versions (3.8 or 3.11)
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
+          python-version: ${{ matrix.python-version }}
 
       - name: updating pip, requirements, pytest
         run: | 
@@ -24,12 +27,13 @@ jobs:
       - name: Turning 'editable' mode on
         run: pip install -e .
         #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
+        #no requirements file for this package
       - name: creating pytest directory
         run: mkdir -p tests/test_results/
         
       - name: running test file with pytest
         run: python -m pytest ./tests/test.py
-        continue-on-error: true
+        #continue-on-error: true
 
      
       - name: upload pytest results

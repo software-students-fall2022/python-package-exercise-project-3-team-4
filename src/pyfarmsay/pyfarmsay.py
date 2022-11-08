@@ -1,5 +1,5 @@
 from textwrap import wrap
-from . import animals 
+from . import animals
 from .util import animalsay, INDENT_DEFAULT, MAXWIDTH_DEFAULT
 
 
@@ -28,5 +28,3 @@ def farmsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):
     + "\n" + animalsay(wrap(message, maxwidth), animal=animals.SHEEP, indent=indent)
     +"\n" + animalsay(wrap(message, maxwidth), animal=animals.PENGUIN, indent=indent)
     + "\n" + animalsay(wrap(message, maxwidth), animal=animals.DOG, indent=indent))
-
-

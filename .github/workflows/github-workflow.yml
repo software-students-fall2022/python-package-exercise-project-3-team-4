@@ -22,7 +22,7 @@ jobs:
             pip install pytest
 
       - name: Turning 'editable' mode on
-        run: pip install -e
+        run: pip install -e .
         #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
       - name: creating pytest directory
         run: mkdir -p tests/test_results/

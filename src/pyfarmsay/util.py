@@ -1,4 +1,4 @@
-from animals import COW
+from .animals import COW
 
 INDENT_DEFAULT = 4
 MAXWIDTH_DEFAULT = 100

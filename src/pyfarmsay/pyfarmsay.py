@@ -1,6 +1,6 @@
 from textwrap import wrap
-import animals 
-from util import animalsay, INDENT_DEFAULT, MAXWIDTH_DEFAULT
+from . import animals 
+from .util import animalsay, INDENT_DEFAULT, MAXWIDTH_DEFAULT
 
 
 def cowsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):

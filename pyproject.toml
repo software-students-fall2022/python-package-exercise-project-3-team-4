@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pyfarmsay"
 description = "An example of a package developed with pyenv, built with build using setuptools, uploaded to PyPI using twine, and distributed via pip."
-version = "0.0.11"
+version = "0.0.13"
 authors = [
     { name="Harrison Douglass", email="hpd2015@nyu.edu" },
     { name="Sarah Al-Towaity", email="sa5793@nyu.edu" },

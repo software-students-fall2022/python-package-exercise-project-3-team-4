@@ -23,11 +23,11 @@
     "default": {
         "pyfarmsay": {
             "hashes": [
-                "sha256:2078c91999a50ac027e8cd0e3bd2c5b369c43f00adf9dcd2923d01683cb0f544",
-                "sha256:bf6d46195d6d6419b0785a6eb3b6a4b06b581fe543d3a444d696bc1b83f461ab"
+                "sha256:0590f64a2316a76c5fd9524fb61b3d604a10f60fc77b0d8b308b75cfe70ff20c",
+                "sha256:716325264e9bc13747dbd5bab7432c8c8d1c3645fcc80d7107746303252eef69"
             ],
             "index": "testpypi",
-            "version": "==0.0.11"
+            "version": "==0.0.13"
         }
     },
     "develop": {}

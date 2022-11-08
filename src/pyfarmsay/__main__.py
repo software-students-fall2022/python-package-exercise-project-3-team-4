@@ -1,5 +1,5 @@
 import sys
-from . import pyfarmsay
+import pyfarmsay
 
 
 def main():
@@ -18,6 +18,8 @@ def main():
         return pyfarmsay.penguinsay(message)
     elif animal == "sheep":
         return pyfarmsay.sheepsay(message)
+    elif animal == "farm":
+        return pyfarmsay.farmsay(message)
     else:
         return "animal not in farm :(!"
 

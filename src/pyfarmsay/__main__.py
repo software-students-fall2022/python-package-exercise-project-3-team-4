@@ -2,10 +2,7 @@ import sys
 from . import pyfarmsay
 
 
-def main():
-    animal = sys.argv[1].lower()
-    message = " ".join(sys.argv[2:])
-
+def main(animal, message):
     if animal == "cow":
        return pyfarmsay.cowsay(message)
     elif animal == "pig":
@@ -24,6 +21,8 @@ def main():
     
 
 if __name__ == "__main__":
+    animal = sys.argv[1].lower()
+    message = " ".join(sys.argv[2:])
     print(main())
 
 

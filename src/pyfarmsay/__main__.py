@@ -15,6 +15,8 @@ def main(animal, message):
         return pyfarmsay.penguinsay(message)
     elif animal == "sheep":
         return pyfarmsay.sheepsay(message)
+    elif animal == "farm":
+        return pyfarmsay.farmsay(message)
     else:
         return "animal not in farm :(!"
 

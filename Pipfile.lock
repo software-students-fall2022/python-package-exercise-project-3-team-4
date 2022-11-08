@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a1b04ff4289adc3311fe3635ab9d007774073925e281b4efb131752cc95925d4"
+            "sha256": "cb02f5b6e0e80b77b621a1d9baec026d006f4427aaa5ed528de2de644383623c"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,11 +23,11 @@
     "default": {
         "pyfarmsay": {
             "hashes": [
-                "sha256:2078c91999a50ac027e8cd0e3bd2c5b369c43f00adf9dcd2923d01683cb0f544",
-                "sha256:bf6d46195d6d6419b0785a6eb3b6a4b06b581fe543d3a444d696bc1b83f461ab"
+                "sha256:387796fc020ebdb69355ff3379595f236aadd98646c174ef4f10a522887a4939",
+                "sha256:3f3ab88b56cc4cc5d43d6b1e3026cfede70ecb45ea52504ebb2f6e0a378051e7"
             ],
             "index": "testpypi",
-            "version": "==0.0.11"
+            "version": "==0.0.14"
         }
     },
     "develop": {}

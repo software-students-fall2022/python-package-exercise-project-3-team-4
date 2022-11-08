@@ -1,11 +1,12 @@
 name: pyfarm-test
-run-name: ${{ github.actor }}'s Run of the Workflow
+run-name: ${{ github.actor }}'s Pull Request Run of the Workflow
 on: [pull_request]
 
 jobs:
   the_first_test:
     name: The First Test Job
     runs-on: ubuntu-latest
+    time-out-minutes: 5
     #envirnoment variable CI set to false
 
     steps:
@@ -20,6 +21,8 @@ jobs:
             python -m pip install --upgrade pip
             pip install pytest
 
+      - name: Turning 'editable' mode on
+        run: pip install -e
         #if [ -f requirements.txt ]; then pip install -r requirements.txt; fi 
       - name: creating pytest directory
         run: mkdir -p tests/test_results/
@@ -33,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: pytest results of the run
-          path: ./tests/test_results/test-results.xml
+          path: ./.github/test_results/test-results.xml
         if: ${{ always() }}
 
 

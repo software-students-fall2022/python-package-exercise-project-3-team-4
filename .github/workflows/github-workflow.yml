@@ -33,7 +33,7 @@ jobs:
         
       - name: running test file with pytest
         run: python -m pytest ./tests/test.py
-        continue-on-error: true
+        #continue-on-error: true
 
      
       - name: upload pytest results

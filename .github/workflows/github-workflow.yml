@@ -6,7 +6,7 @@ jobs:
   the_first_test:
     name: The First Test Job
     runs-on: ubuntu-latest
-    time-out-minutes: 5
+    timeout-minutes: 5
     #envirnoment variable CI set to false
 
     steps:

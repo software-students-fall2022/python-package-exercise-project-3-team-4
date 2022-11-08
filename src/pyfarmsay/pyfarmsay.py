@@ -20,3 +20,11 @@ def penguinsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):
 
 def dogsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):
     return animalsay(wrap(message, maxwidth), animal=animals.DOG, indent=indent)
+
+def farmsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):
+    return (animalsay(wrap(message, maxwidth), animal=animals.COW, indent=indent) 
+    + "\n" + animalsay(wrap(message, maxwidth), animal=animals.PIG, indent=indent)
+    + "\n" + animalsay(wrap(message, maxwidth), animal=animals.CHICKEN, indent=indent)
+    + "\n" + animalsay(wrap(message, maxwidth), animal=animals.SHEEP, indent=indent)
+    +"\n" + animalsay(wrap(message, maxwidth), animal=animals.PENGUIN, indent=indent)
+    + "\n" + animalsay(wrap(message, maxwidth), animal=animals.DOG, indent=indent))

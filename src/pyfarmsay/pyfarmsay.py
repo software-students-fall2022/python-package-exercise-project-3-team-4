@@ -1,5 +1,5 @@
 from textwrap import wrap
-from . import animals 
+from . import animals
 from .util import animalsay, INDENT_DEFAULT, MAXWIDTH_DEFAULT
 
 
@@ -20,5 +20,3 @@ def penguinsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):
 
 def dogsay(message, maxwidth=MAXWIDTH_DEFAULT, indent=INDENT_DEFAULT):
     return animalsay(wrap(message, maxwidth), animal=animals.DOG, indent=indent)
-
-

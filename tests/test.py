@@ -6,7 +6,8 @@ import src.pyfarmsay.animals as animals
 
 # Tests: 1. test that input exists in function return message
 #        2. test that the correct aninmal exists in function return message
-#        3. test that invalid function parametes are handled correctly
+#        3. test that invalid function parameters are handled correctly
+#        4. test that default noises are correct (when parameters are EMPTY string)
 class Tests: 
      def test_sanity_check(self):
           """
@@ -16,6 +17,54 @@ class Tests:
           actual = True
           assert expected == actual
      
+     def test_default_cowsay(self): 
+          """
+          Testing if default input exists in cowsay function output. 
+          """
+          expected = "moo"
+          actual = pyfarmsay.cowsay("")
+          assert actual.find(expected) != -1
+
+     def test_default_pigsay(self): 
+          """
+          Testing if default input exists in cowsay function output. 
+          """
+          expected = "oink"
+          actual = pyfarmsay.pigsay("")
+          assert actual.find(expected) != -1
+
+     def test_default_chickensay(self): 
+          """
+          Testing if default input exists in chickensay function output. 
+          """
+          expected = "cluck"
+          actual = pyfarmsay.chickensay("")
+          assert actual.find(expected) != -1
+
+     def test_default_sheepsay(self): 
+          """
+          Testing if default input exists in sheepsay function output. 
+          """
+          expected = "baa"
+          actual = pyfarmsay.sheepsay("")
+          assert actual.find(expected) != -1
+
+     def test_default_penguinsay(self): 
+          """
+          Testing if default input exists in penguinsay function output. 
+          """
+          expected = "noot"
+          actual = pyfarmsay.penguinsay("")
+          assert actual.find(expected) != -1
+
+     def test_default_dogsay(self): 
+          """
+          Testing if default input exists in dogsay function output. 
+          """
+          expected = "woof"
+          actual = pyfarmsay.dogsay("")
+          assert actual.find(expected) != -1
+
      def test_input_recieved_cowsay(self):
           """
           Testing if input exists in cowsay function output. 

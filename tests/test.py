@@ -4,6 +4,7 @@ import pytest
 import src.pyfarmsay.pyfarmsay as pyfarmsay
 import src.pyfarmsay.animals as animals
 import src.pyfarmsay.__main__ as main
+import sys
 # Tests: 1. test that input exists in function return message
 #        2. test that the correct aninmal exists in function return message
 #        3. test that invalid function parameters are handled correctly
@@ -65,6 +66,19 @@ class Tests:
           actual = pyfarmsay.dogsay("")
           assert actual.find(expected) != -1
 
+     def test_default_farmsay(self):
+          """
+          Testing if default input exists in famray function output.
+          """
+          expected = ["woof", "baa", "noot", "oink", "moo", "cluck"]
+          actual = pyfarmsay.farmsay("")
+
+          valid = True
+          for i in range(len(expected)):
+               valid = valid and actual.find(expected[i]) != -1
+
+          assert valid
+         
      def test_input_recieved_cowsay(self):
           """
           Testing if input exists in cowsay function output. 
@@ -111,6 +125,14 @@ class Tests:
           """
           text = "some string"
           actual = pyfarmsay.dogsay(text)
+          assert actual.find(text) != 1
+
+     def test_input_recieved_farmsay(self):
+          """
+          Testing if input exists in farmsay function output
+          """
+          text = "some string"
+          actual = pyfarmsay.farmsay(text)
           assert actual.find(text) != 1
 
      def test_animal_exists_cowsay(self): 
@@ -185,54 +207,22 @@ class Tests:
 
           assert exists == True
 
-     def test_improper_input_cowsay(self):
+     def test_animals_exist_farmsay(self):
           """
-          Testing if error is raised with invalid empty string as parameter
-          for cowsay function. 
+           Testing if all animals exist in farmsay function output.
           """
-          with pytest.raises(TypeError) as errorInfo:
-               pyfarmsay.cowsay("")
+          text = "some string"
+          result = pyfarmsay.farmsay(text)
+          exists = False
+          if all(result.find(part) > -1 for part in animals.PENGUIN.body) and \
+          all(result.find(part) > -1 for part in animals.COW.body) and \
+          all(result.find(part) > -1 for part in animals.DOG.body) and \
+          all(result.find(part) > -1 for part in animals.SHEEP.body) and \
+          all(result.find(part) > -1 for part in animals.CHICKEN.body) and \
+          all(result.find(part) > -1 for part in animals.PIG.body):
+               exists = True
 
-     def test_improper_input_pigsay(self):
-          """
-          Testing if error is raised with invalid empty string as parameter
-          for pigsay function. 
-          """
-          with pytest.raises(TypeError) as errorInfo:
-               pyfarmsay.pigsay("")
-     
-     def test_improper_input_chickensay(self):
-          """
-          Testing if error is raised with invalid empty string as parameter
-          for chickensay function. 
-          """
-          with pytest.raises(TypeError) as errorInfo:
-               pyfarmsay.chickensay("")
-
-     def test_improper_input_sheepsay(self):
-          """
-          Testing if error is raised with invalid empty string as parameter
-          for sheepsay function. 
-          """
-          with pytest.raises(TypeError) as errorInfo:
-               pyfarmsay.sheepsay("")
-     
-     def test_improper_input_dogsay(self):
-          """
-          Testing if error is raised with invalid empty string as parameter
-          for dogsay function. 
-          """
-          with pytest.raises(TypeError) as errorInfo:
-               pyfarmsay.dogsay("")
-
-     def test_improper_input_penguinsay(self):
-          """
-          Testing if error is raised with invalid empty string as parameter
-          for penguinsay function. 
-          """
-          with pytest.raises(TypeError) as errorInfo:
-               pyfarmsay.penguinsay("")
-
+          assert exists
 
      def test_improper_input_cli(self):
           """
@@ -240,7 +230,7 @@ class Tests:
           """
           animal = "unknown"
           message = "some message"
-          result = main.main(animal, message)
+          result = main.call_animal(animal, message)
           assert result == "animal not in farm :(!"
 
      def test_proper_cow_detection_cli(self):
@@ -249,65 +239,79 @@ class Tests:
           """
           animal = "cow"
           message = "some message"
-          result = main.main(animal, message)
+          result = main.call_animal(animal, message)
           expected = pyfarmsay.cowsay(message)
 
           assert result == expected
 
      def test_proper_dog_detection_cli(self):
           """
-          Testing if cow is displayed from the command line if the argument "cow" is displayed
+          Testing if dog is displayed from the command line if the argument "dog" is displayed
           """
           animal = "dog"
           message = "some message"
-          result = main.main(animal,message)
+          result = main.call_animal(animal,message)
           expected = pyfarmsay.dogsay(message)
 
           assert result == expected
 
      def test_proper_pig_detection_cli(self):
           """
-          Testing if cow is displayed from the command line if the argument "cow" is displayed
+          Testing if pig is displayed from the command line if the argument "pig" is inputted
           """
           animal = "pig"
           message = "some message"
-          result = main.main(animal, message)
+          result = main.call_animal(animal, message)
           expected = pyfarmsay.pigsay(message)
 
           assert result == expected
    
      def test_proper_penguin_detection_cli(self):
           """
-          Testing if cow is displayed from the command line if the argument "cow" is displayed
+          Testing if penguin is displayed from the command line if the argument "penguin" is inputted
           """
           animal = "penguin"
           message = "some message"
-          result = main.main(animal, message)
+          result = main.call_animal(animal, message)
           expected = pyfarmsay.penguinsay(message)
 
           assert result == expected
 
      def test_proper_chicken_detection_cli(self):
           """
-          Testing if cow is displayed from the command line if the argument "cow" is displayed
+          Testing if chicken is displayed from the command line if the argument "chicken" is inputted
           """
           animal = "chicken"
           message = "some message"
-          result = main.main(animal, message)
+          result = main.call_animal(animal, message)
           expected = pyfarmsay.chickensay(message)
 
           assert result == expected
 
      def test_proper_sheep_detection_cli(self):
           """
-          Testing if cow is displayed from the command line if the argument "cow" is displayed
+          Testing if sheep is displayed from the command line if the argument "sheep" is inputte
           """
           animal = "sheep"
           message = "some message"
-          result = main.main(animal, message)
+          result = main.call_animal(animal, message)
           expected = pyfarmsay.sheepsay(message)
 
           assert result == expected
 
 
-          
+     def test_proper_farm_detection_cli(self):
+          """
+          Testing if farm animals are displayed from the command line if the argument "farm" is inputted
+          """
+          animal = "farm"
+          message = "some message"
+          result = main.call_animal(animal, message)
+          expected = pyfarmsay.farmsay(message)
+
+          assert result == expected
+
+     def test_improper_input_main(self):
+          sys.argv = []
+          res = main.main()
+          assert res == "You have to specify the pyanimal in the pyfarm that you would like to see."

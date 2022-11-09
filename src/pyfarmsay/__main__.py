@@ -2,7 +2,15 @@ import sys
 from . import pyfarmsay
 
 
-def main(animal, message):
+def main():
+    if len(sys.argv) > 1:
+        animal = sys.argv[1].lower()
+        message = " ".join(sys.argv[2:])
+        return call_animal(animal, message)
+    else:
+        return "You have to specify the pyanimal in the pyfarm that you would like to see."
+  
+def call_animal(animal, message):
     if animal == "cow":
        return pyfarmsay.cowsay(message)
     elif animal == "pig":
@@ -15,14 +23,13 @@ def main(animal, message):
         return pyfarmsay.penguinsay(message)
     elif animal == "sheep":
         return pyfarmsay.sheepsay(message)
+    elif animal == "farm":
+        return pyfarmsay.farmsay(message)
     else:
         return "animal not in farm :(!"
 
-    
-
 if __name__ == "__main__":
-    animal = sys.argv[1].lower()
-    message = " ".join(sys.argv[2:])
     print(main())
+
 
 

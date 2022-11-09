@@ -73,6 +73,4 @@ Pyfarmsay comes with the following 7 main functions, each accepting a message ar
 
 Our animals can only repeat what you tell them to say, so if no message is given, each animal will call out their native animal sound. 
 
-## Link to PyPI package 
-incoming 
 

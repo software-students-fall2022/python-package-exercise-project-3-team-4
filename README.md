@@ -1,5 +1,5 @@
 # Pyfarmsay
-
+![Badger](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-4/actions/workflows/github-workflow.yml/badge.svg)
 Expanding on the exiting package, [pycowsay](https://pypi.org/project/pycowsay/), pyfarmsay does not only feature a talking 
 cow, but an entire talking farm! Our beautiful farm features a talking cow, pig, chicken, dog, penguin, and sheep. 
 
@@ -61,3 +61,5 @@ from pyfarmsay.pyfamrsay import [function name]
 ```
 
 ## Link to PyPI package
+
+

@@ -71,7 +71,7 @@ python3 ex.py
 Running [ex_2.py](example_files/ex_2.py) with arguments is equivalent to running pyfarmsay on the command line.
 
 ## Build and Test the package 
-To build and test our package for yourself, have [pipenv](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#managing-dependencies).
+To build and test our package for yourself, have [pipenv](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#managing-dependencies)
 installed. 
 
 Install our package into a virtual environment following the instructions above. 
@@ -120,7 +120,7 @@ python3 ex_2.py [ANIMAL] [MESSAGE]
 Our animals can only repeat what you tell them to say, so if no message is given, each animal will call out their native animal sound. 
 
 ## Link to PyPI Package
-View our package [here.](https://pypi.org/project/pyfarmsay/0.1.1/)
+View our package [here.](https://pypi.org/project/pyfarmsay/0.1.3/)
 
 ## Authors
 1. [Sarah Al-Towaity](https://github.com/sarah-altowaity1)

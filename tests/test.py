@@ -312,6 +312,80 @@ class Tests:
           assert result == expected
 
      def test_improper_input_main(self):
+          """
+          Testing if the module will output an error message when the user
+          inputs no command line arguments.
+          """
           sys.argv = []
           res = main.main()
           assert res == "You have to specify the pyanimal in the pyfarm that you would like to see."
+
+     def test_capitalized_arg_input_cow_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay","COW"]
+          res = main.main()
+          expected = pyfarmsay.cowsay("")
+          assert res == expected
+
+     def test_capitalized_arg_input_pig_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay","PIG"]
+          res = main.main()
+          expected = pyfarmsay.pigsay("")
+          assert res == expected
+
+     def test_capitalized_arg_input_chicken_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay","CHICKEN"]
+          res = main.main()
+          expected = pyfarmsay.chickensay("")
+          assert res == expected
+
+     def test_capitalized_arg_input_dog_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay","DOG"]
+          res = main.main()
+          expected = pyfarmsay.dogsay("")
+          assert res == expected
+
+     def test_capitalized_arg_input_penguin_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay","PENGUIN"]
+          res = main.main()
+          expected = pyfarmsay.penguinsay("")
+          assert res == expected
+
+     def test_capitalized_arg_input_sheep_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay","SHEEP"]
+          res = main.main()
+          expected = pyfarmsay.sheepsay("")
+          assert res == expected
+
+     def test_capitalized_arg_input_farm_main(self):
+          """
+          Testing if program will still recognize animal arguments capitalized
+          as valid input
+          """
+          sys.argv = ["pyfarmsay", "FARM"]
+          res = main.main()
+          expected = pyfarmsay.farmsay("")
+          assert res == expected

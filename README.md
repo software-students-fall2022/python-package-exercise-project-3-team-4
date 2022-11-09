@@ -75,3 +75,11 @@ Our animals can only repeat what you tell them to say, so if no message is given
 
 ## Link to PyPI Package
 View our package [here.](https://pypi.org/project/pyfarmsay/0.1.1/)
+
+## Authors
+1. [Sarah Al-Towaity](https://github.com/sarah-altowaity1)
+2. [Harrison Douglass](https://github.com/hpdouglass)
+3. [Brandon Chao](https://github.com/Sciao)
+4. [Eduarda Martini](https://github.com/ezmartini)
+5. [Michelle Lu](https://github.com/michellelu78?tab=repositories)
+

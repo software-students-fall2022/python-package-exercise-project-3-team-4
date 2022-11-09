@@ -1,6 +1,7 @@
 
 from multiprocessing.sharedctypes import Value
 import pytest
+import src.pyfarmsay.util as util
 import src.pyfarmsay.pyfarmsay as pyfarmsay
 import src.pyfarmsay.animals as animals
 import src.pyfarmsay.__main__ as main
@@ -17,6 +18,67 @@ class Tests:
           expected = True
           actual = True
           assert expected == actual
+
+     def test_no_arg_genquotebubble(self):
+          """
+          Testing if TypeError is raised when helper util.genquotebubble()
+          has no arguments. 
+          """
+          with pytest.raises(TypeError) as err:
+               util.genquotebubble()
+
+     def test_line_exists_genquotebubble(self):
+          """
+          TODO Testing if all characters in non-empty genquotebubble
+          argument are present in function output. 
+          """
+          assert True; 
+     
+     def test_FOO_genquotebubble(self):
+          """
+          TODO Final required test for genquotebubble
+          """
+          assert True;   
+     
+     def test_no_arg_animalsay(self):
+          """
+          Testing if TypeError is raised when helper util.animalsay()
+          has no valid arguments. 
+          """
+          with pytest.raises(ValueError) as err:
+               util.animalsay("")
+
+     def test_default_animalsay(self):
+          """
+          Testing if default animal sound is returned
+          when helper util.animalsay()
+          has an valid but empty argument. 
+          """
+          result = util.animalsay([])
+          assert result.find(animals.COW.sound) != -1
+
+     def test_input_animalsay(self):
+          """
+          Testing if default animal sound is returned
+          when helper util.animalsay()
+          has an valid and non-empty argument. 
+          """
+          result = util.animalsay(["hello"])
+          assert result.find("hello") != -1
+     
+     def test_animal_call_animal(self):
+          """
+          Testing if all expected animals are called using 
+          call_animal(ANIMAL, MESSAGE).
+          """
+          message = "message"
+          farm = ["cow", "pig", "chicken", "dog", "penguin", "sheep", 
+          "farm"]
+          for animal in farm: 
+               result = main.call_animal(animal, message)
+               if result == "animal not in farm :(!":
+                    assert False
+          assert True
      
      def test_default_cowsay(self): 
           """

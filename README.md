@@ -58,7 +58,7 @@ from pyfarmsay import pyfarmsay
 or 
 
 ```
-from pyfarmsay.pyfamrsay import [function name]
+from pyfarmsay.pyfarmsay import [function name]
 ```
 to import a specific function from the package.
 ## Package functions
@@ -72,7 +72,7 @@ Pyfarmsay comes with the following 7 main functions, each accepting a message ar
 6. dogsay (use 'dog' for the animal argument if you are invoking the function from the command line)
 7. farmsay (use 'farm' for the animal argument if you are invoking the function from the command line)
 
-See our animals can only repeat what you tell
+Our animals can only repeat what you tell
 them to say, so if no message is given, each animal will call out their native animal sound. 
 
 ## Link to PyPI package 

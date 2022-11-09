@@ -70,6 +70,37 @@ python3 ex.py
 
 Running [ex_2.py](example_files/ex_2.py) with arguments is equivalent to running pyfarmsay on the command line.
 
+## Build and Test the package 
+To build and test our package for yourself, have [pipenv](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#managing-dependencies).
+installed. 
+
+Install our package into a virtual environment following the instructions above. 
+
+Run:
+```
+pipenv shell
+```
+Install [build](https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives) into the virtual 
+environment using:
+
+```
+pip install build
+```
+Build the project using:
+
+```
+python3 -m build
+```
+To test, install pytest from the virtual environment shell using:
+
+```
+pip install pytest
+```
+Run unit tests using 
+
+```
+python3 -m pytest tests/test
+```
 ## Package functions
 Pyfarmsay comes with the following 7 main functions, each accepting a message argument:
 Use the following command to run the program:

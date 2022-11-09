@@ -80,18 +80,6 @@ class Tests:
                     assert False
           assert True
      
-     def test_message_call_animal(self):
-          message = ""
-          farm = ["cow", "pig", "chicken", "dog", "penguin", "sheep", 
-          "farm"]
-          for animal in farm: 
-               result = main.call_animal(animal, message)
-
-
-
-
-
-     
      def test_default_cowsay(self): 
           """
           Testing if default input exists in cowsay function output. 

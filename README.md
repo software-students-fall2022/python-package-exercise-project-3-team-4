@@ -1,6 +1,7 @@
 # Pyfarmsay
 ![Badger](https://github.com/software-students-fall2022/python-package-exercise-project-3-team-4/actions/workflows/github-workflow.yml/badge.svg)
-Expanding on the exiting package, [pycowsay](https://pypi.org/project/pycowsay/), pyfarmsay does not only feature a talking 
+
+Expanding on the existing package, [pycowsay](https://pypi.org/project/pycowsay/), pyfarmsay does not only feature a talking 
 cow, but an entire talking farm! Our beautiful farm features a talking cow, pig, chicken, dog, penguin, and sheep. 
 
 ## Install 
@@ -22,7 +23,7 @@ pipenv install pyfarmsay
 This will create a virtual environment, which you can access by running ```pipenv shell```
 
 ## Run 
-Once pyfarmsay is installed on your machine, you can use it from the command line or from within a python file. 
+Once pyfarmsay is installed on your machine (or virtual environment), you can use it from the command line or from within a python file. 
 ### From the Command Line
 To run the package from the command line, all you have to do is invoke the package name, followed by the animal of your choice and your desired message:
 ```
@@ -59,7 +60,21 @@ or
 ```
 from pyfarmsay.pyfamrsay import [function name]
 ```
+to import a specific function from the package.
+## Package functions
+Pyfarmsay comes with the following 7 main functions, each accepting a message argument:
 
-## Link to PyPI package
+1. cowsay (use 'cow' for the animal argument if you are invoking the function from the command line)
+2. pigsay (use 'pig' for the animal argument if you are invoking the function from the command line)
+3. chickensay (use 'chicken' for the animal argument if you are invoking the function from the command line)
+4. sheepsay (use 'sheep' for the animal argument if you are invoking the function from the command line)
+5. penguinsay (use 'penguin' for the animal argument if you are invoking the function from the command line)
+6. dogsay (use 'dog' for the animal argument if you are invoking the function from the command line)
+7. farmsay (use 'farm' for the animal argument if you are invoking the function from the command line)
 
+See our animals can only repeat what you tell
+them to say, so if no message is given, each animal will call out their native animal sound. 
+
+## Link to PyPI package 
+incoming 
 

@@ -29,16 +29,24 @@ class Tests:
 
      def test_line_exists_genquotebubble(self):
           """
-          TODO Testing if all characters in non-empty genquotebubble
-          argument are present in function output. 
+          Testing if all characters in non-empty genquotebubble
+          argument are present in function output.
           """
-          assert True; 
+          line = list("some string")
+          res = util.genquotebubble(line)
+          res = "\n".join(res)
+          valid = True
+          for word in line:
+               valid = valid and res.find(word) != -1
+          assert valid
      
-     def test_FOO_genquotebubble(self):
+     def test_empty_line_genquotebubble(self):
           """
-          TODO Final required test for genquotebubble
+          Testing if genquotebubble raises a value error
+          when passed an empty list as input 
           """
-          assert True;   
+          with pytest.raises(ValueError) as err:
+               util.genquotebubble([])
      
      def test_no_arg_animalsay(self):
           """
@@ -141,6 +149,74 @@ class Tests:
 
           assert valid
          
+     def test_no_input_cowsay(self):
+          """
+          testing if default animal sound is outputted when pyfarmsay functions
+          are called with no arguments.
+          """
+          expected = "moo"
+          actual = pyfarmsay.cowsay()
+          assert actual.find(expected) != -1
+
+     def test_no_input_pigsay(self):
+          """
+          testing if default animal sound is outputted when pyfarmsay functions
+          are called with no arguments.
+          """
+          expected = "oink"
+          actual = pyfarmsay.pigsay()
+          assert actual.find(expected) != -1
+          
+     def test_no_input_chickensay(self):
+          """
+          testing if default animal sound is outputted when pyfarmsay functions
+          are called with no arguments.
+          """
+          expected = "cluck"
+          actual = pyfarmsay.chickensay()
+          assert actual.find(expected) != -1
+
+          
+     def test_no_input_dogsay(self):
+          """
+          testing if default animal sound is outputted when pyfarmsay functions
+          are called with no arguments.
+          """
+          expected = "woof"
+          actual = pyfarmsay.dogsay()
+          assert actual.find(expected) != -1
+
+     def test_no_input_penguinsay(self):
+          """
+          testing if default animal sound is outputted when pyfarmsay functions
+          are called with no arguments.
+          """
+          expected = "noot"
+          actual = pyfarmsay.penguinsay()
+          assert actual.find(expected) != -1
+
+     def test_no_input_sheepsay(self):
+          """
+          testing if default animal sound is outputted when pyfarmsay functions
+          are called with no arguments.
+          """
+          expected = "baa"
+          actual = pyfarmsay.sheepsay()
+          assert actual.find(expected) != -1
+
+     def test_no_input_farmsay(self):
+          """
+          Testing if default input exists in famray function output.
+          """
+          expected = ["woof", "baa", "noot", "oink", "moo", "cluck"]
+          actual = pyfarmsay.farmsay()
+
+          valid = True
+          for i in range(len(expected)):
+               valid = valid and actual.find(expected[i]) != -1
+
+          assert valid
+
      def test_input_recieved_cowsay(self):
           """
           Testing if input exists in cowsay function output. 

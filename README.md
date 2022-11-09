@@ -60,8 +60,23 @@ or
 from pyfarmsay.pyfarmsay import [function name]
 ```
 to import a specific function from the package.
+
+As an example, check out [ex.py](example_files/ex.py) for a sample program that uses our package 
+functions. Use the following command to run the program:
+
+```
+python3 ex.py
+```
+
+Running [ex_2.py](example_files/ex_2.py) with arguments is equivalent to running pyfarmsay on the command line.
+
 ## Package functions
 Pyfarmsay comes with the following 7 main functions, each accepting a message argument:
+Use the following command to run the program:
+
+```
+python3 ex_2.py [ANIMAL] [MESSAGE]
+```
 
 1. `cowsay` (use `cow` for the animal argument if you are invoking the function from the command line)
 2. `pigsay` (use `pig` for the animal argument if you are invoking the function from the command line)

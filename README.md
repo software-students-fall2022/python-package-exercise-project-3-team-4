@@ -60,8 +60,54 @@ or
 from pyfarmsay.pyfarmsay import [function name]
 ```
 to import a specific function from the package.
+
+As an example, check out [ex.py](example_files/ex.py) for a sample program that uses our package 
+functions. Use the following command to run the program:
+
+```
+python3 ex.py
+```
+
+Running [ex_2.py](example_files/ex_2.py) with arguments is equivalent to running pyfarmsay on the command line.
+
+## Build and Test the package 
+To build and test our package for yourself, have [pipenv](https://packaging.python.org/en/latest/tutorials/managing-dependencies/#managing-dependencies)
+installed. 
+
+Install our package into a virtual environment following the instructions above. 
+
+Run:
+```
+pipenv shell
+```
+Install [build](https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives) into the virtual 
+environment using:
+
+```
+pip install build
+```
+Build the project using:
+
+```
+python3 -m build
+```
+To test, install pytest from the virtual environment shell using:
+
+```
+pip install pytest
+```
+Run unit tests using 
+
+```
+python3 -m pytest tests/test
+```
 ## Package functions
 Pyfarmsay comes with the following 7 main functions, each accepting a message argument:
+Use the following command to run the program:
+
+```
+python3 ex_2.py [ANIMAL] [MESSAGE]
+```
 
 1. `cowsay` (use `cow` for the animal argument if you are invoking the function from the command line)
 2. `pigsay` (use `pig` for the animal argument if you are invoking the function from the command line)
@@ -74,4 +120,12 @@ Pyfarmsay comes with the following 7 main functions, each accepting a message ar
 Our animals can only repeat what you tell them to say, so if no message is given, each animal will call out their native animal sound. 
 
 ## Link to PyPI Package
-View our package [here.](https://pypi.org/project/pyfarmsay/0.1.1/)
+View our package [here.](https://pypi.org/project/pyfarmsay/0.1.3/)
+
+## Authors
+1. [Sarah Al-Towaity](https://github.com/sarah-altowaity1)
+2. [Harrison Douglass](https://github.com/hpdouglass)
+3. [Brandon Chao](https://github.com/Sciao)
+4. [Eduarda Martini](https://github.com/ezmartini)
+5. [Michelle Lu](https://github.com/michellelu78?tab=repositories)
+
